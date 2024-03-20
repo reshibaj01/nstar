@@ -1,0 +1,47 @@
+export const GalleryData = [
+  {
+      id:1,
+      titile:"App",
+      image:"https://source.unsplash.com/random/223x200"
+  },
+  {
+      id:2,
+      titile:"App",
+      image:"https://source.unsplash.com/random/222x200"
+  },
+  {
+      id:3,
+      titile:"App",
+      image:"https://source.unsplash.com/random/215x200"
+  },
+  {
+      id:4,
+      titile:"Card",
+      image:"https://source.unsplash.com/random/231x200"
+  },
+  {
+      id:5,
+      titile:"Card",
+      image:"https://source.unsplash.com/random/230x200"
+  },
+  {
+      id:6,
+      titile:"Card",
+      image:"https://source.unsplash.com/random/234x200"
+  },
+  {
+      id:7,
+      titile:"Web",
+      image:"https://source.unsplash.com/random/238x200"
+  },
+  {
+      id:8,
+      titile:"Web",
+      image:"https://source.unsplash.com/random/239x200"
+  },
+  {
+    id:9,
+    titile:"Web",
+    image:"https://source.unsplash.com/random/237x200"
+},
+]
