@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
-// import { button } from 'react-router-dom';
+
+
 import {FaEnvelope } from 'react-icons/fa';
 import {FaPhone } from 'react-icons/fa';
 import { FaLocationDot } from "react-icons/fa6";
@@ -11,27 +11,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 
 function ContactForm() {
-  
-  const [formData, setFormData] = useState({name: '',email: '',subject: '',message: ''});
-  const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    // setFormData(prevState => ({
-    //   ...prevState,
-    //   [name]: value
-    // }));
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    navigate('/thank-you');
-  };
-
-  
-  
-  return (
+return (
 
 
 <section id="contact" class="contact">
@@ -72,24 +52,24 @@ function ContactForm() {
     </div>
 
     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" >
-      <form  onSubmit={handleSubmit}  class="register" >
+      <form action="https://api.web3forms.com/submit" method="POST"   class="register" >
        
         <div class="row">
           <div class="form-group col-md-6">
+          <input type="hidden" name="access_key" value="94a63e56-7594-4075-b274-9186b5b82cf3"/>
             <label for="name">Your Name</label>
-            <input type="text" 
-             value={formData.name}
-             onChange={handleChange}
-            name="name"
+            <input type="text"
+             name="name" 
              class="form-control"
              id="name"
-              required />
+              required
+             />
+           
           </div>
           <div class="form-group col-md-6 mt-3 mt-md-0">
             <label for="name">Your Email</label>
             <input type="email" 
-             value={formData.email}
-             onChange={handleChange}
+             
             class="form-control"
              name="email"
               id="email"
@@ -100,26 +80,27 @@ function ContactForm() {
         <div class="form-group mt-3">
           <label for="name">Subject</label>
           <input type="text"
-          value={formData.subject}
-          onChange={handleChange}
+         
            class="form-control" 
           name="subject" id="subject"
             required />
             
         </div>
         <div class="form-group mt-3">
+
           <label for="name">Message</label>
           <textarea class="form-control" 
           name="message"
-          value={formData.message}
-          onChange={handleChange}
+         
            rows="10" required></textarea>
            
      
 
         </div>
        
-        <div class="text-center"><button type="submit"  className='btn'  >Send Message</button></div>
+        <div class="text-center">
+        <input type="hidden" name="redirect" value="https://ornate-gaufre-c44f24.netlify.app/thank-you"/>
+        <button type="submit"  className='btn'  >Send Message</button></div>
       </form>
     </div>
 
