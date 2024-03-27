@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-
+// import { Link } from 'react-router-dom';
 import {FaEnvelope } from 'react-icons/fa';
 import {FaPhone } from 'react-icons/fa';
 import { FaLocationDot } from "react-icons/fa6";
@@ -11,6 +10,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 
 function ContactForm() {
+ 
 return (
 
 
@@ -99,8 +99,9 @@ return (
         </div>
        
         <div class="text-center">
-        <input type="hidden" name="redirect" value="https://ornate-gaufre-c44f24.netlify.app/thank-you"/>
-        <button type="submit"  className='btn'  >Send Message</button></div>
+        <input type="hidden" name="redirect"  value="https://boisterous-trifle-481168.netlify.app/thank-you" />
+        <button type="submit"  to="/thank-you" className='btn'  >Send Message</button></div>
+       
       </form>
     </div>
 
